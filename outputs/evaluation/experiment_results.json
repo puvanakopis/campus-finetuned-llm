@@ -1,0 +1,141 @@
+{
+  "timestamp": "2026-10-02 19:14:20",
+  "model_name": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter_dir": "models/university-lora",
+  "test_samples_evaluated": 10,
+  "lora_config": {
+    "r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "task_type": "CAUSAL_LM",
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ]
+  },
+  "training_config": {
+    "learning_rate": 0.0003,
+    "epochs": 1,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 1
+  },
+  "metrics_summary": {
+    "base_model": {
+      "rouge1": 0.1738,
+      "rouge2": 0.0391,
+      "rougeL": 0.1146,
+      "token_f1": 0.1847,
+      "domain_terminology_accuracy": 0.2857
+    },
+    "finetuned_lora": {
+      "rouge1": 0.2632,
+      "rouge2": 0.0888,
+      "rougeL": 0.213,
+      "token_f1": 0.2624,
+      "domain_terminology_accuracy": 0.2857
+    }
+  },
+  "sample_comparisons": [
+    {
+      "id": 1,
+      "category": "course",
+      "question": "Could you please tell me, what is the credit weight of standard courses at ANU?",
+      "ground_truth": "Most standard academic courses carry 3 or 4 modular credits, involving 3 lecture hours and 1 to 2 lab/tutorial hours per week.",
+      "base_response": "The credit weight of standard courses at the Australian National University (ANU) can vary depending on several factors such as the course content, the institution's teaching style, and the specific requirements of the program. However, generally speaking:\n\n1. **Core Courses**: These are foundational courses that provide a solid base for students to build upon in their studies. They often have higher credit weights compared to elective courses.\n\n2. **Elective Courses**: Elective courses allow students to choose from a variety of topics within their major or minor, which can be more flexible and less structured than core courses.\n\n3. **Special Topics**: Special topics courses may require more detailed study and research, leading to slightly lower credit weights compared to regular electives.\n\n4. **",
+      "lora_response": "The credit weight of standard courses at the Australian National University (ANU) varies depending on the course content and its relevance to the university's academic priorities. Generally, standard courses in mathematics, physics, chemistry, biology, and social sciences typically have a higher credit weight compared to other subjects.\n\nFor example:\n- Mathematics: 3 credits\n- Physics: 4 credits\n- Chemistry: 3 credits\n- Biology: 2 credits\n\nHowever, specific credit weights can vary slightly from year to year based on faculty recommendations and departmental priorities. It's always best to check with your department or the relevant faculty for the most up-to-date information about credit weighting for each course.",
+      "base_f1": 0.1667,
+      "lora_f1": 0.2366
+    },
+    {
+      "id": 2,
+      "category": "department",
+      "question": "Information request: Which department is responsible for Marketing degrees?",
+      "ground_truth": "The Department of Marketing & Strategy in the Faculty of Business oversees all marketing programs. You can also verify this through the official student portal.",
+      "base_response": "The Department of Marketing at the University of California, Berkeley (UC Berkeley) is primarily responsible for marketing degrees. The marketing program at UC Berkeley offers a Bachelor of Arts in Marketing and a Master of Business Administration in Marketing. Additionally, there may be specific departments or divisions within the School of Management that focus on marketing-related fields, but the main department for marketing degrees would be the Marketing Program at UC Berkeley.",
+      "lora_response": "The Department of Marketing at the University of California, Berkeley is responsible for marketing degrees.",
+      "base_f1": 0.1905,
+      "lora_f1": 0.25
+    },
+    {
+      "id": 3,
+      "category": "student_services",
+      "question": "Could you please tell me, where can international students get visa and immigration guidance?",
+      "ground_truth": "The International Student Office (ISO), located in Room S-202, assists with student visas, work permits, and cultural transition support.",
+      "base_response": "I'm sorry, but I don't have specific information about where to find visa and immigration guidance for international students. The process of obtaining a visa or immigration status can vary depending on your country's laws and requirements, as well as your individual circumstances.\n\nFor general advice on how to apply for a visa or immigration status, it is best to consult with an immigration lawyer who specializes in international law. They can provide tailored guidance based on your specific situation and legal requirements.\n\nAdditionally, many universities offer resources and support groups that can help international students navigate their visa applications and other immigration processes. These organizations often have staff members who can assist with questions and provide guidance throughout the application process.\n\nIf you need more detailed information about specific countries' visa requirements or procedures,",
+      "lora_response": "I'm sorry, but I am unable to assist with that.",
+      "base_f1": 0.1273,
+      "lora_f1": 0.069
+    },
+    {
+      "id": 4,
+      "category": "lecture",
+      "question": "As a student at ANU, what are laboratory safety requirements?",
+      "ground_truth": "All students attending engineering and science laboratories must wear closed-toe shoes, lab coats, and safety goggles, and complete the mandatory online lab safety module.",
+      "base_response": "At Australian National University (ANU), there are specific guidelines for laboratory safety to ensure the health and well-being of students. Here are some key points:\n\n1. **Laboratory Safety Regulations**: Laboratories must adhere to strict regulations set by ANU. These include:\n   - **Fire Safety**: Ensure that all fire extinguishers are in working order and properly maintained.\n   - **Chemical Safety**: Follow the guidelines provided by the Chemistry Department on handling chemicals safely.\n   - **Electrical Safety**: Use electrical equipment correctly and follow electrical safety protocols.\n\n2. **Personal Protective Equipment (PPE)**: Students should wear appropriate PPE such as lab coats, gloves, goggles, and aprons when conducting experiments or performing tasks involving chemicals.\n\n3",
+      "lora_response": "Laboratory safety is an important aspect of academic success and should be taken seriously by all students. Here are some key points to consider:\n\n1. **Safety Protocols**: Laboratories must adhere to strict safety protocols. This includes wearing appropriate personal protective equipment (PPE) such as lab coats, gloves, goggles, and masks.\n\n2. **Chemical Safety**: Be aware of the chemicals used in your experiments and follow the proper handling procedures. Always wear a chemical splash respirator if necessary.\n\n3. **Electrical Safety**: Ensure that electrical equipment is properly grounded and tested for voltage. Follow all electrical safety guidelines provided by the school or department.\n\n4. **Fire Safety**: Keep flammable materials away from open flames and electrical sources. Use fire extingu",
+      "base_f1": 0.2178,
+      "lora_f1": 0.1964
+    },
+    {
+      "id": 5,
+      "category": "student_services",
+      "question": "As a student at ANU, where can international students get visa and immigration guidance?",
+      "ground_truth": "The International Student Office (ISO), located in Room S-202, assists with student visas, work permits, and cultural transition support.",
+      "base_response": "At Australian National University (ANU), you can find detailed information on visa and immigration guidance through several channels:\n\n1. **University Admissions Office**: The main office for all admissions processes is located in the School of Business and Economics, Room 203, Building 4, Level 5, Canberra.\n\n2. **Student Services**: You can contact the Student Services Department directly by phone or email to discuss your specific situation with an advisor who will be able to provide tailored advice based on your individual circumstances.\n\n3. **International Students' Centre**: This centre offers resources and support specifically designed for international students. They can help you navigate the visa process, including understanding the requirements and deadlines for various types of visas such as student, work permit,",
+      "lora_response": "The Australian National University (ANU) offers a range of resources to assist international students with their visa and immigration requirements. Here are some key points:\n\n1. **Student Services**: The Student Services Office is located in the ANU Canberra campus and provides information on visa applications, immigration procedures, and other relevant matters.\n\n2. **University Admissions**: The University's website has detailed information about the application process for visas and immigration, including deadlines and required documents.\n\n3. **International Students' Association (ISA)**: This organization offers support and advice to international students, as well as information on visa and immigration issues.\n\n4. **Visa Clearance Centre**: Located in the ANU Canberra campus, this center provides assistance with visa clearance and processing.\n\n5",
+      "base_f1": 0.2143,
+      "lora_f1": 0.2366
+    },
+    {
+      "id": 6,
+      "category": "academic_policy",
+      "question": "Tell me about: How does a student apply for an official Leave of Absence (LOA)?",
+      "ground_truth": "At Apex National University, students in good standing may apply for a temporary Leave of Absence of up to two semesters by submitting an LOA form approved by their Academic Dean.",
+      "base_response": "An official leave of absence (LOA) is typically granted by your institution to allow you to take time off from work or study without losing your job status. Here\u2019s how you can apply for an LOA:\n\n1. **Review Your Employment Contract**: Before applying for an LOA, it's important to review your employment contract with your employer. This document outlines the terms and conditions of your employment.\n\n2. **Check Eligibility Criteria**: Check if you meet the eligibility criteria for an LOA. Common factors include:\n   - You must have been employed at least 6 months.\n   - You must not be on sick leave or vacation.\n   - You must have completed all required training or education requirements.\n   - You must have no outstanding",
+      "lora_response": "To apply for an Official Leave of Absence (LOA), you must first complete the following steps:\n\n1. Complete the LOA application form.\n2. Submit your completed application to the appropriate department or office within the university.\n\nThe specific procedures may vary depending on the university's policy and regulations. It is recommended that students consult their respective departments or offices for detailed information on how to apply for an LOA.",
+      "base_f1": 0.1852,
+      "lora_f1": 0.321
+    },
+    {
+      "id": 7,
+      "category": "lecturer",
+      "question": "Tell me about: Who teaches CS101 Introduction to Programming?",
+      "ground_truth": "At Apex National University, cS101 is coordinated and lectured by Dr. Sarah Jenkins, Associate Professor in the Department of Computer Science.",
+      "base_response": "CS101 is a foundational course in computer science that introduces students to the basics of programming concepts and techniques. The course typically covers topics such as variables, data types, control structures (like loops and conditionals), functions, object-oriented programming, and basic algorithms.\n\nThe instructor for this course may vary depending on the institution or program offering it. However, here are some common instructors who might teach CS101:\n\n1. **Dr. Jane Smith** - A professor at your specific institution.\n2. **Professor John Doe** - Another professor from another institution.\n3. **Ms. Emily Johnson** - A teaching assistant from your institution.\n4. **Mr. Frank Brown** - A graduate student from another institution.\n\nThese instructors would",
+      "lora_response": "CS101 is a course that introduces students to the fundamentals of computer science. The professor who teaches this course is usually a computer science faculty member or an instructor in the department of computer science at your institution.",
+      "base_f1": 0.2075,
+      "lora_f1": 0.4082
+    },
+    {
+      "id": 8,
+      "category": "lecturer",
+      "question": "Information request: Where is Professor Alan Thorne's office?",
+      "ground_truth": "Professor Alan Thorne is located in Room C-218 of the Turing Complex. You can also verify this through the official student portal.",
+      "base_response": "I'm sorry, but I don't have access to real-time information about specific individuals' locations or offices. My knowledge is based on my last update in 2021, so it might not be up-to-date for current events.\n\nIf you're looking for Professor Alan Thorne's office address, you can try searching online for \"Professor Alan Thorne's office location\" or using a search engine like Google. Alternatively, you could contact the university directly to inquire about his office details.",
+      "lora_response": "Professor Alan Thorne's office is located in the Department of Mathematics and Statistics building on the main campus at 100 College Avenue, Room 234.",
+      "base_f1": 0.1798,
+      "lora_f1": 0.3913
+    },
+    {
+      "id": 9,
+      "category": "library",
+      "question": "As a student at ANU, can postgraduate students borrow more books?",
+      "ground_truth": "Yes, postgraduate students and researchers may borrow up to 20 books for a 30-day loan period.",
+      "base_response": "Yes, as a student at ANU (Australian National University), you have access to a wide range of resources, including libraries and academic databases, which can be used for research purposes. Postgraduate students typically have access to these same resources, although they may need to pay for them or use their own library card.\n\nHowever, it's important to note that while most universities provide free access to certain materials, there might be some restrictions on borrowing specific types of books or accessing certain databases due to copyright or other legal considerations. It's always best to check with your department or the library directly to confirm what is allowed for your specific course or project.\n\nAdditionally, many universities offer online resources and digital tools that can supplement physical book collections, making it easier to",
+      "lora_response": "Yes, as a postgraduate student at ANU, you may be able to borrow additional books beyond your regular library collection. However, it's important to check with your department or academic office for specific guidelines on borrowing resources during your studies.",
+      "base_f1": 0.1538,
+      "lora_f1": 0.2909
+    },
+    {
+      "id": 10,
+      "category": "degree",
+      "question": "Tell me about: What is the duration of the Software Engineering degree?",
+      "ground_truth": "At Apex National University, the BSc in Software Engineering is a 4-year degree (8 semesters), which includes a mandatory 6-month industrial internship in Year 3.",
+      "base_response": "The duration of a Software Engineering degree typically ranges from 4 to 6 years, depending on the institution and program you choose. This can vary significantly based on factors such as your academic performance, career goals, and specific requirements set by the institution.\n\nHere\u2019s a breakdown:\n\n1. **Bachelor's Degree**: Typically, a bachelor's degree in Computer Science or a related field is required for most software engineering degrees. The duration of this degree varies but is generally around 3-5 years.\n\n2. **Master's Degree (M.S.)**: After completing the Bachelor's degree, many students pursue a Master's degree in Computer Science or a related field. This usually takes another 3-5 years to complete.\n\n3. **Ph.D.",
+      "lora_response": "The duration of a software engineering degree varies depending on the institution you attend. However, most universities offer a 4-year program that typically takes between 3 to 5 years to complete. This includes both undergraduate and graduate coursework.\n\nFor example, at many prestigious universities like Stanford or MIT, a bachelor's degree in computer science can be completed in just 2-3 years. In contrast, a master's degree in software engineering might take longer, often around 6-8 years to complete.\n\nIt's important to note that the exact duration may vary based on your specific field of study, course load, and other factors. Additionally, some institutions offer accelerated programs for students who want to start work immediately after graduation.",
+      "base_f1": 0.2041,
+      "lora_f1": 0.2241
+    }
+  ]
+}
