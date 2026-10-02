@@ -1,0 +1,14 @@
+# ANU Department of Data Science & AI
+## Course: AI405 - Machine Learning Fundamentals
+### Lecture 1: Supervised Learning & Model Validation
+
+#### 1. Supervised Learning Formulation
+Supervised learning algorithms build a mathematical model of a dataset that contains both input features (X) and desired output labels (y). The objective is to find a mapping function f(X) -> y that minimizes empirical risk and generalizes well to unseen test samples.
+
+#### 2. Bias-Variance Tradeoff
+- **Underfitting (High Bias):** The model is overly simplistic and cannot capture the underlying structure of the data (e.g., fitting a linear line to polynomial data).
+- **Overfitting (High Variance):** The model learns the statistical noise in the training set, leading to high training accuracy but poor generalization to test data.
+- **Regularization:** Techniques such as L1 (Lasso) and L2 (Ridge) weight penalties help prevent overfitting by constraining model complexity.
+
+#### 3. Cross-Validation Strategies
+To reliably estimate out-of-sample performance, k-fold cross-validation is used. The training set is split into k equally sized folds; the model is trained on k-1 folds and evaluated on the remaining fold, repeating k times.

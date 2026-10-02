@@ -1,0 +1,15 @@
+# ANU Department of Artificial Intelligence
+## Course: AI401 - Artificial Intelligence & Intelligent Agents
+### Lecture 1: State-Space Search and Heuristic Optimization
+
+#### 1. Problem Formulation
+An agent environment is modeled as a state space defined by:
+- Initial state $S_0$
+- Actions available in state $s$: $Actions(s)$
+- Transition model: $Result(s, a)$
+- Goal test predicate: $IsGoal(s)$
+- Path cost function: $c(s, a, s')$
+
+#### 2. Uninformed vs Informed Search Strategies
+- **Uninformed Search:** Breadth-First Search (BFS - complete, optimal for uniform step costs), Depth-First Search (DFS - space efficient $O(bm)$), Uniform Cost Search (Dijkstra).
+- **Informed (Heuristic) Search:** A* Search combines path cost $g(n)$ and heuristic estimate $h(n)$ via evaluation function $f(n) = g(n) + h(n)$. A* is guaranteed to find an optimal solution if $h(n)$ is admissible (never overestimates the true cost to reach the goal) and consistent (monotonic).

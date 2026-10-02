@@ -1,0 +1,13 @@
+# ANU Department of Computer Science
+## Course: DB301 - Database Management Systems
+### Lecture 1: ACID Transactions and Concurrency Control
+
+#### 1. ACID Properties
+Database transaction reliability is governed by the ACID paradigm:
+- **Atomicity:** All operations within a transaction either execute completely or abort completely (all-or-nothing).
+- **Consistency:** A transaction brings the database from one valid state to another valid state, maintaining all integrity constraints.
+- **Isolation:** Concurrent execution of transactions yields the same system state as if they were executed sequentially.
+- **Durability:** Once a transaction commits, its effects persist permanently even in the event of a system crash or power outage.
+
+#### 2. Two-Phase Locking (2PL)
+Strict 2PL guarantees serializability by requiring transactions to acquire shared locks for reads and exclusive locks for writes during a growing phase, releasing them only during the shrinking phase upon commit/abort.

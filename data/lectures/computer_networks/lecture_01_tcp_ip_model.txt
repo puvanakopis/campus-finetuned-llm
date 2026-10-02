@@ -1,0 +1,15 @@
+# ANU Department of Information Security & Networks
+## Course: NET202 - Computer Networks & Communications
+### Lecture 1: The TCP/IP Protocol Suite & Transport Layer
+
+#### 1. Layered Architecture Overview
+The Internet model consists of five logical layers:
+- **Application Layer:** HTTP, HTTPS, DNS, SSH, SMTP.
+- **Transport Layer:** End-to-end communication, reliability, multiplexing (TCP, UDP).
+- **Network Layer:** Logical addressing and routing across subnets (IPv4, IPv6, ICMP).
+- **Data Link Layer:** Framing and MAC address physical hop delivery (Ethernet, Wi-Fi 802.11).
+- **Physical Layer:** Transmission of raw bitstreams over copper, fiber, or RF.
+
+#### 2. TCP vs UDP Protocol Comparison
+- **Transmission Control Protocol (TCP):** Connection-oriented (3-way handshake SYN/SYN-ACK/ACK), reliable ordered delivery, flow control via sliding window, and congestion control (Tahoe, Reno).
+- **User Datagram Protocol (UDP):** Connectionless, lightweight, low-overhead, best-effort delivery without retransmission, ideal for real-time video streaming, DNS lookups, and online gaming.

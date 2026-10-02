@@ -1,0 +1,18 @@
+# ANU Department of Software Engineering
+## Course: SE204 - Object-Oriented Software Design
+### Lecture 1: SOLID Design Principles
+
+#### 1. Single Responsibility Principle (SRP)
+Every class or module should have one, and only one, reason to change. A class should encapsulate a single responsibility or business concern. For instance, a `StudentRecordManager` class should handle student data persistence, while `ReportGenerator` handles formatting and exporting reports.
+
+#### 2. Open/Closed Principle (OCP)
+Software entities (classes, modules, functions) should be open for extension, but closed for modification. This is typically achieved via polymorphism, interfaces, and abstract base classes. When adding a new discount policy or payment gateway, create a new derived class rather than altering existing, tested code.
+
+#### 3. Liskov Substitution Principle (LSP)
+Objects of a superclass should be replaceable with objects of a subclass without breaking the application's correctness. Subtypes must honor the contractual expectations of their supertypes (no throwing unexpected exceptions or violating pre/post-conditions).
+
+#### 4. Interface Segregation Principle (ISP)
+Clients should not be forced to depend upon interfaces that they do not use. Instead of one fat general-purpose interface, create multiple granular, role-specific interfaces.
+
+#### 5. Dependency Inversion Principle (DIP)
+High-level modules should not depend upon low-level modules; both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions. Use Dependency Injection (DI) frameworks or constructor injection to decouple components.
