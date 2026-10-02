@@ -1,0 +1,30 @@
+# Core Machine Learning & Fine-Tuning
+torch>=2.2.0
+torchvision>=0.17.0
+transformers>=4.40.0
+datasets>=2.19.0
+peft>=0.10.0
+trl>=0.8.6
+accelerate>=0.29.0
+bitsandbytes>=0.43.0; platform_system != "Windows" or platform_machine != "arm64"
+
+# Data Processing & Utilities
+pandas>=2.2.0
+numpy>=1.26.0
+pyyaml>=6.0.1
+tqdm>=4.66.0
+scikit-learn>=1.4.0
+
+# Evaluation & Metrics
+rouge-score>=0.1.2
+nltk>=3.8.1
+
+# RAG & Embeddings
+sentence-transformers>=2.7.0
+chromadb>=0.5.0
+pypdf>=4.2.0
+
+# Web UI & Notebooks
+streamlit>=1.35.0
+jupyter>=1.0.0
+ipykernel>=6.29.0
